@@ -1,0 +1,643 @@
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*----------- Estilos Documentacion -----------*/
+/*--------------- Autor:UMNG ------------------*/
+/*-----Des: Ing. Pedro Pablo Camacho Agudelo---*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+
+/*------------ Estilos estandar ---------------*/
+html, body, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary, blockquote {
+    width: 100%;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background:  #E4E4E4;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin: 1em 0;
+    line-height: normal;
+    word-spacing: normal;
+    letter-spacing: normal;
+}
+h1 {
+    color: #1D427C;
+    font-size: 2.1em;
+    text-align: center;
+    font-weight:700;
+}
+
+h2 {
+    font-size: 1.75em;
+    color: #04559b;
+}
+h3 {
+    font-size: 1.4em;
+    color: #123e64;
+}
+h4 { 
+    font-size: 1.1em;
+    color: #015979;
+}
+.doc h2, .doc h3, .doc h4{
+    margin-top:1.6em;
+    margin-bottom:0;
+}
+/**** h5 y h6 son provisionales ya que se cambiaran por otras etiquetas****/
+/* Pie de figura */
+h5 {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+/* Citas */
+h6 { 
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    padding-left: 30px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+/*********************/
+a {
+    word-wrap: break-word;
+    font-weight: 600;
+}
+p{
+    margin: 0;
+}
+pre {
+    text-align: left;
+}
+q{
+    quotes: "\00ab" "\00bb";
+}
+q:before{
+    content:open-quote;
+}
+q:after{
+    content:close-quote;
+}
+blockquote{
+    border:0;
+}
+blockquote[data-comillas="si"]{
+    quotes: "\00ab" "\00bb";
+    padding:0;
+    margin: 0;
+}
+blockquote[data-comillas="si"]:before{
+    content:open-quote;
+}
+blockquote[data-comillas="si"]:after{
+    content:close-quote;
+}
+blockquote[data-comillas="no"]{
+    padding:0 0 0 2.5em;
+    margin: 1.5em 0px;;
+}
+#logo, #formula {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0px;
+    background: none;
+    margin-bottom: 1.5em;
+}
+/*-------- Fin estilos estandar -------------*/
+/*-------- Cuerpo documentacion -------------*/
+.doc{
+    max-width: 1280px;
+    margin: 1em auto;
+    padding: 0 1.2em;
+}
+
+.doc li{
+    margin: 0.4em 0;
+}
+
+section p, article p, [data-listaInter] > li{
+    margin: 1em 0;
+}
+.sangrado {
+    padding-left: 2em;
+}
+/* Notas */
+.nota {
+    background: rgba(180,180,180,0.2);
+    padding: 1em 2em;
+    max-width: 80%;
+    margin: 1.2em auto;
+    text-align: center;
+    border-radius: 1em;
+}
+.nota p > span {
+    font-size:1.3em;
+    font-weight:700;
+    color:#800000
+}
+/* Video embebido responsive */
+.videoCont{
+    max-width:90%;
+    margin:0 auto;
+}
+.videoSize{
+    max-width: 70%;
+    margin: 2em auto;
+}
+.video {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    margin: 1em 0;
+}
+.mapme {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0px;
+    height: 600px;
+}
+.video iframe, .mapme iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Imagenes o graficos */
+figure{
+    max-width: 90%;
+    margin: 0 auto;
+}
+figure > p, .estTabla > p, .tabla > p, .videoCont > p {
+    font-size: 0.9em;
+    text-align: left;
+    font-weight:700;
+    margin: 2em auto 1em;
+}
+figure img{
+    border: 6px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    max-width: 70%;
+    height: auto;
+    margin: 1.5em auto 0;
+    display: block;
+}
+figure figcaption, .videoSize p{
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    margin: 2em auto;
+}
+figcaption p, .videoSize p{
+    margin:0 0 0.4em 0;
+    color: rgba(0, 0, 0, 0.55);
+}
+.citaAmpliar {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.55);
+    font-style: italic;
+    text-align: center;
+}
+.imgAmpliar{
+    cursor: pointer;
+}
+
+.lb{
+    align-items: center;
+    vertical-align: middle;
+}
+.lb .modal-dialog{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+    max-height: 100%;
+}
+.lb img{
+    max-width: 100%;
+}
+.lb .modal-header{
+    padding: 2em;
+}
+.lb .close{
+    font-size: 3.5em;
+    margin-top: -0.5em;
+
+}
+.lb .modal-footer{
+    border: 0;
+}
+/* Listas */ 
+.listaAnidada ol {
+    counter-reset: section;
+    list-style-type: none;
+}
+.listaAnidada ol li::before {
+    counter-increment: section;
+    content: counters(section, ".") ".";
+    padding-right: 7px;
+    margin-left: -17px;
+}
+.listaLetras ol {
+    counter-reset: my-badass-counter;
+    list-style-type:none;
+}
+
+.listaLetras ol li::before {
+    content: counter(my-badass-counter, lower-latin)".";
+    counter-increment: my-badass-counter;
+    padding-right: 7px;
+    margin-left: -17px;
+}
+/* Tabla */
+.estTabla{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.estTabla div{
+    overflow:auto;
+}
+.estTabla table {
+    max-width: 70%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 1em auto 1em;
+}
+
+.estTabla td {
+    vertical-align: middle;
+    padding: 0.4em 1em;
+    border: 1px solid #003f7f;
+
+}
+.estTabla[data-tipoTabla="1"] tr:first-child, .estTabla[data-tipoTabla="3"] tr:first-child, .estTabla[data-tipoTabla="2"] td:first-child, .estTabla [data-celdaColor="oscuro"] {
+    background-color: #04559b;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+}
+.estTabla[data-tipoTabla="3"] tr + tr > td:first-child, .estTabla [data-celdaColor="claro"] {
+    background-color: #047b9b;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+}
+.estTabla [data-celdaColor = "none"] {
+    background:transparent !important;
+    color:#333 !important;
+    font-weight:normal !important;
+}
+
+.estTabla td:first-child {
+    border-left-width: 0px;
+}
+.estTabla td:last-child {
+    border-right-width: 0px;
+}
+.estTabla span, .sinFormato span, .estTabla > table + p, .sinFormato > table + p {
+    margin: 0 auto;
+    display: table;
+    vertical-align: middle;
+    font-size: 0.9em;
+    text-align: center;
+    font-weight:700;
+}
+.estTabla > p + div + p, .tabla > p + div + p, .videoCont > p + div + p{
+    font-size: 0.9em;
+    text-align: left;
+    margin: 1em auto 1.5em;
+    font-weight:400;
+}
+.tabla{
+    max-width:90% !important;
+    margin: 0 auto !important;
+}
+
+/* Imagen y tabla sin formato */
+.sinFormato, #fondo, #carga_umng {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0px;
+    background: none;
+    display: table;
+    vertical-align: middle;
+    margin: 2em auto;
+}
+/* Referencias */
+.referencias{
+    background:none;
+    margin-top:7em;
+    text-align:left;
+    font-size: 0.8em;
+}
+.referencias cite{
+    color: #828A8D;
+    line-height: 1em;
+    font-style:normal;
+}
+.referencias ol{
+    counter-reset: cita;
+    list-style-type:none;
+    color: #828A8D;
+    padding-left:0.2em;
+}
+.referencias li p{
+    margin:0;
+    display: inline;
+}
+.referencias ol li:before {
+    content: "[" counters(cita, ".") "]";
+    counter-increment: cita;
+    padding-right: 0.4em;
+}
+hr {
+    background-color: rgba(20,65,184,0.5);
+    height: 2px;
+    margin-left: 0;
+    width: 50%;
+    margin-bottom: 8px;
+}
+
+/*--------- Fin cuerpo documentacion ----- */
+/*----------- Footer de la pagina --------*/
+footer {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(230,230,230,0.8) 100%);
+    text-align: center;
+    margin: 30px auto 0 auto;
+    padding: 11px 0;
+    border-radius: 10px 10px 0 0;
+    max-width: 1280px;
+}
+#cerrar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    background-color: #ffffff;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+#cerrar a {
+    color: #a01713;
+    text-decoration: none;
+}
+#cerrar a:hover {
+    color: #d30e14;
+}
+footer #cerrar + p{
+    margin: 10px;
+}
+/*----------- Fin footer -------------*/
+/*------------ Datas -----------------*/
+[data-color="rojo"]{
+    color:#800000;
+}
+[data-size="8"]{
+    width:80em;
+}
+[data-size="7"]{
+    width:70em;
+}
+[data-size="6"]{
+    width: 60em;
+}
+[data-size="5"]{
+    width:50em;
+}
+[data-size="4"]{
+    width:40em;
+}
+[data-size="3"]{
+    width:30em;
+}
+[data-size="2"]{
+    width:20em;
+}
+[data-size="1.5"]{
+    width:15em;
+}
+[data-size="1"]{
+    width:10em;
+}
+[data-size="0.5"]{
+    width:5em;
+}
+[data-apa], [data-apa="si"]{
+    padding-left: 4em;
+    text-indent: -4em;
+}
+[data-align="center"], .estTabla table[data-align="center"]{
+    text-align:center;
+}
+[data-align="justify"], .estTabla table[data-align="justify"]{
+    text-align:justify;
+}
+[data-align="left"], .estTabla table[data-align="left"]{
+    text-align:left;
+}
+[data-align="right"], .estTabla table[data-align="right"]{
+    text-align:right;
+}
+[data-formulaEscrita], [data-formulaEscrita="si"]{
+    text-align:center;
+    margin:2em 0;
+    font-weight:600;
+    font-family:serif;
+    font-style:italic;
+}
+[data-textoVer], [data-textoDir="vertical"], [data-textoVerRow] > td > p{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin: 0 auto;
+}
+[data-noMargin] {
+    margin: 0;
+}
+.estTabla [data-celdaColor="amarillo"] {
+    background-color: #ddbf42;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+}
+.estTabla [data-celdaColor="naranja"] {
+    background-color: #e39e54;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+}
+.estTabla [data-celdaColor="rojo"] {
+    background-color: #d64d4d;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+}
+.estTabla [data-celdaColor="verdeO"] {
+    background-color: #4d7358;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+}
+.estTabla [data-celdaColor="verdeC"] {
+    background-color: #7db252;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+}
+/*---------- Fin datas ---------------*/
+/*----------- Queries ----------------*/
+@media (max-width: 767px) and (min-width: 320px){
+    body{
+        font-size: 1em;
+        display: block;
+    }
+    .imgAmpliar{
+        cursor: inherit;
+    }
+    figure img, .videoSize{
+        max-width:100%;
+    }
+}
+
+/**************************************/
+/* Declaracion para los docs antiguos */
+/**************************************/
+img {
+    border: 6px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+#logo, #formula {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0px;
+    background: none;
+    margin-bottom: 1.5em;
+}
+.tab_filas td {
+    border: 1px solid #003f7f;
+    border-width: 1px 1px 1px 0px;
+}
+.tab_titulo td {
+    border: 1px solid #003f7f;
+    border-width: 1px 1px 1px 0px;
+}
+/*--- Tablas con filas diferentes ---*/
+.tab_filas tr:nth-child(odd) {
+    background-color: #dcdddc;
+}
+.tab_filas tr:nth-child(even) {
+    background-color: #eeeeed;
+}
+.tab_filas tr:last-child td {
+    border-width: 0px 1px 1px 0px;
+}
+.tab_filas tr td:last-child {
+    border-width: 0px 0px 1px 0px;
+}
+.tab_filas tr:last-child td:last-child {
+    border-width: 0px 0px 1px 0px;
+}
+.tab_filas tr:first-child td:first-child {
+    border-width: 1px 1px 1px 0px;
+}
+.tab_filas tr:first-child td:last-child {
+    border-width: 1px 0px 1px 0px;
+}
+/*--- Tablas con titulo ---*/
+table {
+    border-collapse: collapse;
+    max-width: 70%;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    margin: 20px auto 15px;
+}
+td {
+    vertical-align: middle;
+    padding: 5px 15px;
+}
+.tab_titulo tr:first-child td {
+    background-color: #04559b;
+    border: 0px solid #003f7f;
+    text-align: center;
+    border-width: 1px 1px 1px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.tab_titulo tr:last-child td {
+    border-width: 0px 1px 1px 0px;
+}
+.tab_titulo tr td:last-child {
+    border-width: 0px 0px 1px 0px;
+}
+.tab_titulo tr:last-child td:last-child {
+    border-width: 0px 0px 1px 0px;
+}
+.tab_titulo tr:first-child td:first-child {
+    border-width: 1px 1px 1px 0px;
+}
+.tab_titulo tr:first-child td:last-child {
+    border-width: 1px 0px 1px 1px;
+    text-align: center;
+}
+#lista_anidada ol {
+    counter-reset: section;
+    list-style-type: none;
+}
+#lista_anidada ol li::before {
+    counter-increment: section;
+    content: counters(section, ".") ".";
+    padding-right: 10px;
+    margin-left: -16px;
+}
+.lista_letras {
+    list-style-type:lower-latin;
+}
+.cita_ampliar {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.55);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 25px;
+}
+#nota {
+    background: rgba(180,180,180,0.2);
+    padding: 10px;
+    max-width: 80%;
+    margin: 15px auto;
+    text-align: center;
+}
+#referencia {
+    font-size: 13px;
+    color: #828A8D;
+    line-height: 1em;
+}
+.referencia {
+    font-size: 13px;
+    color: #828A8D;
+    line-height: 1em;
+}
+body > section{
+    max-width: 1280px;
+    margin: 1em auto;
+        padding: 0 1.2em;
+}
